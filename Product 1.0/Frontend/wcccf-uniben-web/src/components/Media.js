@@ -1,14 +1,14 @@
 import React from 'react'
-import "./HomePage.css"; 
+ 
 
 
-function Header() {
+function Media() {
   return (
     <div className='homepage'>
-        Home page 
+        Media page 
     </div>
 
   )
 }
 
-export default Header;
+export default Media;

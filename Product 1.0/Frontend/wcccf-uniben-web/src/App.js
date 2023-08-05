@@ -1,16 +1,36 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter, Route, Routes} from 'react-router-dom';
 import "./App.css";
-import Layout from "./components/Layout";
 import HomePage from "./components/HomePage";
+import Media from "./components/Media";
+import AboutUs from "./components/AboutUs";
+import ContactUs from "./components/ContactUs";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (
-    <Router>
-      <Layout>
-        <Route exact path="/" component={HomePage} />
-      </Layout>
-    </Router>
+    
+    <BrowserRouter> 
+        <Header/>
+
+        <Routes>
+         <Route exact path="/" Component={HomePage}/>
+         <Route  path="/media" Component={Media}/>  
+         <Route  path="/aboutus" Component={AboutUs}/>  
+         <Route  path="/contactus" Component={ContactUs}/>  
+        </Routes>
+        
+       <Footer/>
+  
+
+ 
+ 
+      
+      
+     </BrowserRouter>
+    
   );
 }
 
